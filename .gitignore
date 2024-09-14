@@ -1,0 +1,7 @@
+.git
+node_modules
+dist
+build
+.nx
+stats.html
+docker-build.sh

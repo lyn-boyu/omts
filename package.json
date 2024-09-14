@@ -1,0 +1,15 @@
+{
+  "name": "omts",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build && lerna run build:types",
+    "test": "lerna run test --stream"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "bun-types": "^1.1.27",
+    "lerna": "^8.1.8",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  }
+}

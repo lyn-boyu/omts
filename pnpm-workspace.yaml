@@ -1,0 +1,4 @@
+packages:
+  - "packages-algorithms/*"
+  - "packages-data-structures/*"
+  - "packages-utils/*"
