@@ -1,0 +1,23 @@
+{
+  "name": "@omts/quick-sort",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "bun run clean && bun build src/index.ts --outdir dist --watch",
+    "build": "bun run clean && bun run build:es2015 && bun run build:minify",
+    "build:minify": " bun build dist/index.js  --minify --sourcemap --outfile dist/index.min.js",
+    "build:es2015": " bun build src/index.ts  --outdir dist",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "test": "bun test"
+  },
+  
+  "dependencies": {},
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^latest",
+    "rimraf": "^latest"
+  }
+}
