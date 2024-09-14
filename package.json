@@ -2,7 +2,8 @@
   "name": "omts",
   "private": true,
   "scripts": {
-    "build": "lerna run build && lerna run build:types",
+    "build": "lerna run build",
+    "publish": "npm run build && lerna run publish",
     "test": "lerna run test --stream"
   },
   "devDependencies": {
