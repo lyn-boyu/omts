@@ -19,7 +19,10 @@ export function countingSort(arr: number[]): number[] {
 
   // Step 3: Build the output array
   for (let i = arr.length - 1; i >= 0; i--) {
-    output[--count[arr[i] - minVal]] = arr[i];
+    const offset = arr[i] - minVal;
+    const outputIndex = count[offset] - 1;
+    output[outputIndex] = arr[i];
+    count[offset]--;
   }
 
   return output;
