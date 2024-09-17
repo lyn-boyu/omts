@@ -34,26 +34,19 @@ console.log(sortedArray); // Output: [1, 1, 2, 3, 6, 8, 10]
 
 ## Development 🛠️
 
-- **`clean`**: Removes the `dist` directory.  
-  `pnpm run clean`
+- **`dev`**: Cleans and builds the package in watch mode using Bun.
 
-- **`dev`**: Cleans and builds the package in watch mode.  
-  `pnpm run dev`
+- **`build`**: Runs a clean build by generating multiple module formats (CJS, ESM, UMD) and type declarations.
 
-- **`build`**: Runs a clean build by generating both ES2015 output and a minified version.  
-  `pnpm run build`
+- **`build:esm`**: Builds the TypeScript source to ES Module (ESM) format.
 
-- **`build:es2015`**: Builds the TypeScript source to ES2015 JavaScript.  
-  `pnpm run build:es2015`
+- **`build:cjs`**: Builds the TypeScript source to CommonJS (CJS) format.
 
-- **`build:minify`**: Minifies the JavaScript output and generates source maps.  
-  `pnpm run build:minify`
+- **`build:umd`**: Builds the TypeScript source to UMD format with a global name `OmtsCountingSort`.
 
-- **`build:types`**: Generates type declaration files only.  
-  `pnpm run build:types`
+- **`build:types`**: Generates type declaration files using the TypeScript compiler.
 
-- **`test`**: Runs all test cases using Bun.  
-  `pnpm run test`
+- **`test`**: Runs all test cases using Bun. 
 
 ## Contributing 🤝
 

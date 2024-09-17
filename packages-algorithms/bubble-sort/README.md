@@ -1,37 +1,37 @@
+# @omts/bubble-sort 🚀
 
-# @omts/quick-sort 🚀
-
-A simple and efficient implementation of the Quick Sort algorithm in TypeScript. This package provides a flexible and fast sorting utility that can be used in both Node.js and browser environments.
+A simple and easy-to-understand implementation of the Bubble Sort algorithm in TypeScript. This package provides a basic sorting utility that works in both Node.js and browser environments.
 
 ## Installation 📦
 
 You can install the package via npm or pnpm:
 
 ```bash
-npm install @omts/quick-sort
+npm install @omts/bubble-sort
 ```
 
 ## Usage ✨
 
-This package exports a `quickSort` function that sorts an array of numbers using the Quick Sort algorithm. Below are some examples of how to use it:
+This package exports a `bubbleSort` function that sorts an array of numbers using the Bubble Sort algorithm. Below are some examples of how to use it:
 
 ```typescript
-import { quickSort } from '@omts/quick-sort';
+import { bubbleSort } from '@omts/bubble-sort';
 
 // Example usage
-const unsortedArray = [3, 6, 8, 10, 1, 2, 1];
-const sortedArray = quickSort(unsortedArray);
+const unsortedArray = [5, 2, 9, 1, 5, 6];
+const sortedArray = bubbleSort(unsortedArray);
 
-console.log(sortedArray); // Output: [1, 1, 2, 3, 6, 8, 10]
+console.log(sortedArray); // Output: [1, 2, 5, 5, 6, 9]
 ```
 
 ### Complexity 📊
 
 - **Time Complexity**:
-  - **Average Case**: O(n log n)
-  - **Worst Case**: O(n^2) - This occurs when the pivot selection is poor (e.g., always choosing the largest or smallest element as pivot in a sorted array).
+  - **Average Case**: O(n^2)
+  - **Worst Case**: O(n^2) - This occurs when the array is sorted in reverse order.
+  - **Best Case**: O(n) - This occurs when the array is already sorted.
 - **Space Complexity**:
-  - **O(log n)** due to the recursion stack in the average case.
+  - **O(1)** as it sorts the array in place without using additional space.
 
 ## Development 🛠️
 
@@ -43,7 +43,7 @@ console.log(sortedArray); // Output: [1, 1, 2, 3, 6, 8, 10]
 
 - **`build:cjs`**: Builds the TypeScript source to CommonJS (CJS) format.
 
-- **`build:umd`**: Builds the TypeScript source to UMD format with a global name `OmtsQuickSort`.
+- **`build:umd`**: Builds the TypeScript source to UMD format with a global name `OmtsBubbleSort`.
 
 - **`build:types`**: Generates type declaration files using the TypeScript compiler.
 
@@ -56,4 +56,8 @@ Contributions are welcome! If you have any improvements or suggestions, please f
 ## License ⚖️
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+ 
+
+
+ ---
  
