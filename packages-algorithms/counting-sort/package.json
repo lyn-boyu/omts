@@ -1,9 +1,9 @@
 {
   "name": "@omts/counting-sort",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.cjs.js",
   "browser": "dist/index.umd.js",
-  "unpkg": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.min.js",
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
   "files": [
@@ -13,11 +13,12 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "bun run clean && bun build src/index.ts --outdir dist --watch",
-    "build": "bun run clean && bun run build:cjs && bun run build:esm && bun run build:umd && bun run build:types",
+    "build": "bun run clean && bun run build:cjs && bun run build:esm && bun run build:umd && bun run build:types && bun run build:minify",
     "build:esm": "bun build src/index.ts --outdir dist/es ",
     "build:cjs": "esbuild src/index.ts --bundle --outfile=dist/index.cjs.js --format=cjs",
     "build:umd": "esbuild src/index.ts --bundle --outfile=dist/index.umd.js --format=iife --global-name=OmtsCountingSort",
     "build:types": "tsc --emitDeclarationOnly --outDir dist/es",
+    "build:minify": "esbuild dist/index.cjs.js --outfile=dist/index.cjs.min.js --minify && esbuild dist/index.umd.js --outfile=dist/index.umd.min.js --minify",
     "test": "bun test"
   },
   "devDependencies": {
