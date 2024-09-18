@@ -1,9 +1,9 @@
-export function debounce<T extends (...args: any[]) => any, Context = any>(
+export function debounce<T extends (...args: any[]) => any>(
     func: T,
     wait: number,
     immediate: boolean = false
 ): (...args: Parameters<T>) => void {
-    let timmerIdx: ReturnType<typeof setTimeout> | null = null;
+    let timerIdx: ReturnType<typeof setTimeout> | null = null;
 
     return function debouncedFunction(...args: Parameters<T>) {
         // save context of the function
@@ -12,7 +12,7 @@ export function debounce<T extends (...args: any[]) => any, Context = any>(
 
 
         const latter = () => {
-            timmerIdx = null;
+            timerIdx = null;
             // if immediate is true, the function is called at the beginning of the delay
             if (!immediate) func.apply(context, args);
         }
@@ -20,15 +20,15 @@ export function debounce<T extends (...args: any[]) => any, Context = any>(
         // when immediate is true, it will be called in two cases:
         // 1. the function is only called before debounce starts 
         // 2. after the timmer is cleared
-        const callNow = immediate && timmerIdx === null;
+        const callNow = immediate && timerIdx === null;
 
         // remove old timmer
-        if (timmerIdx) {
-            clearTimeout(timmerIdx);
+        if (timerIdx) {
+            clearTimeout(timerIdx);
         }
 
         // record the new timmer
-        timmerIdx = setTimeout(latter, wait);
+        timerIdx = setTimeout(latter, wait);
 
         // if immediate is true, the function is called at the beginning of the delay
         if (callNow) func.apply(context, args);
