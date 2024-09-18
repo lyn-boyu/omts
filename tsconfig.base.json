@@ -1,17 +1,28 @@
 {
   "compilerOptions": {
-    "types": ["bun-types"],
     "target": "ES2015",
     "sourceMap": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "outDir": "dist",
     "strict": true,
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "esModuleInterop": true,
-    "declaration": true,  // 启用类型声明文件的生成
-    "skipLibCheck": true
+    "declaration": true, // 启用类型声明文件的生成
+    "skipLibCheck": true,
+    "types": [
+      "bun-types"
+    ],
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.test.ts", "node_modules", "dist"] 
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "node_modules",
+    "dist"
+  ]
 }
