@@ -24,6 +24,21 @@ importers:
         specifier: ^5.6.2
         version: 5.6.2
 
+  packages-algorithms/bubble-sort:
+    devDependencies:
+      bun-types:
+        specifier: ^1.1.27
+        version: 1.1.27
+      esbuild:
+        specifier: ^0.23.1
+        version: 0.23.1
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+
   packages-algorithms/counting-sort:
     devDependencies:
       bun-types:
@@ -40,6 +55,51 @@ importers:
         version: 5.6.2
 
   packages-algorithms/quick-sort:
+    devDependencies:
+      bun-types:
+        specifier: ^1.1.27
+        version: 1.1.27
+      esbuild:
+        specifier: ^0.23.1
+        version: 0.23.1
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+
+  packages-utils/debounce:
+    devDependencies:
+      bun-types:
+        specifier: ^1.1.27
+        version: 1.1.27
+      esbuild:
+        specifier: ^0.23.1
+        version: 0.23.1
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+
+  packages-utils/deep-clone:
+    devDependencies:
+      bun-types:
+        specifier: ^1.1.27
+        version: 1.1.27
+      esbuild:
+        specifier: ^0.23.1
+        version: 0.23.1
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
+
+  packages-utils/event-emitter:
     devDependencies:
       bun-types:
         specifier: ^1.1.27
