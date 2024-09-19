@@ -1,5 +1,5 @@
 import { describe, expect, test, jest } from "bun:test";
-import { debounce } from './index'; // Adjust the path as needed
+import { debounce } from './index'; 
 
 describe("debounce function tests", () => {
 

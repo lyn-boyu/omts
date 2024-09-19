@@ -1,5 +1,5 @@
 import { describe, expect, test, jest } from "bun:test";
-import { throttle } from './index'; // Adjust the path as needed
+import { throttle } from './index';
 
 
 describe('Throttle ', () => {
