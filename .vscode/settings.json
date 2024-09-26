@@ -1,0 +1,7 @@
+{
+    "github.copilot.enable": {
+        "*": true,
+        "typescript": false,
+        "**/index.ts": false // Disable for any index.ts file
+    }
+}
